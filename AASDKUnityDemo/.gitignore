@@ -1,0 +1,20 @@
+# unity
+/android
+/Library
+/obj
+/ios
+/Temp1
+/Temp
+/android
+/export
+/.idea
+/*.csproj
+/*.sln
+/*.apk
+*.meta
+/ThirdLibs_back
+unitypackage/
+
+ProjectSettings/
+
+
