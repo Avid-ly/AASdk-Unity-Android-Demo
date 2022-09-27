@@ -7,17 +7,33 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 using AASDK;
-
+using UPTrace;
 public class TestAASDKCall : MonoBehaviour
 {
 	private bool inited;
-	private const string PRODUCTID = "600027";
-	// Use this for initialization
-	void Start () {
-	}
+    public Text text;
+    private const string PRODUCTID = "600027";
+    private const string CHANNELID = "32400";
+    // Use this for initialization
+    void Start () {
+         text = GameObject.Find("CallText").GetComponent<Text>();
+        UPTraceApi.initTraceSDKWithCallback(PRODUCTID, CHANNELID, new System.Action<string>(tasdkInitSuccess), new System.Action<string>(tasdkInitFail));
 
-	// Update is called once per frame
-	void Update () {
+    }
+    private void tasdkInitSuccess(string usrid)
+    {
+       string resultStr = "TasdkInitSuccess : " + usrid;
+        text.text = resultStr;
+        print(resultStr);
+    }
+    private void tasdkInitFail(string reason)
+    {
+        string resultStr = "tasdkInitFail : " + reason;
+        text.text = resultStr;
+        print(resultStr);
+    }
+    // Update is called once per frame
+    void Update () {
 
 	}
 
@@ -26,15 +42,18 @@ public class TestAASDKCall : MonoBehaviour
 			return;
 		}
 		inited = true;
-
 		AASDKApi.initSDK (PRODUCTID);
     }
 
     public void onAccountLoginClick() {
         AASDKApi.accountLogin();
     }
+    public void onUnAwareLoginClick()
+    {
+        AASDKApi.unAwareLogin();
+    }
 
-	public void onShowUserManagerUIClick() {
+    public void onShowUserManagerUIClick() {
         AASDKApi.showUserManagerUI();
 	}
 

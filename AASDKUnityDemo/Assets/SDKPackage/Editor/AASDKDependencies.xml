@@ -1,0 +1,24 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="com.aas.sdk.account:aasdk:2.0.0.5">
+            <repositories>
+                <repository>https://mvn-bx.dataverse.cn/repository/maven-releases/</repository>
+            </repositories>
+        </androidPackage>
+        <androidPackage spec="androidx.appcompat:appcompat:1.1.0"/>
+        <androidPackage spec="androidx.recyclerview:recyclerview:1.0.0"/>
+        <androidPackage spec="androidx.cardview:cardview:1.0.0"/>
+        <androidPackage spec="androidx.browser:browser:1.0.0"/>
+        <androidPackage spec="com.google.android.material:material:1.0.0"/>
+        <androidPackage spec="com.google.android.gms:play-services-auth:16.0.1"/>
+        <androidPackage spec="com.facebook.android:facebook-login:12.3.0"/>
+    </androidPackages>
+
+    <iosPods>
+        <iosPod name="AASDK" version="2.0.0.3" minTargetSdk="10.0">
+            <sources>
+                <source>https://github.com/Avid-ly/iOS-CocoaPods-Spec.git</source>
+            </sources>
+        </iosPod>
+    </iosPods>
+</dependencies>

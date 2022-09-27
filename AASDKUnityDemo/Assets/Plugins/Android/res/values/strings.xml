@@ -1,0 +1,7 @@
+<resources>
+    <string name="facebook_app_id">979971429531422</string>
+     <string name="fb_provider_id">com.facebook.app.FacebookContentProvider979971429531422</string>
+     <string name="facebook_client_token">ae47159ff4eba1c2548ccac821779d24</string>
+      <string name="googleplay_clientid" >516091732595-a2qnnbjmd6mmsn0m3fuo9kdiadgkh89n.apps.googleusercontent.com</string>
+
+</resources>
